@@ -18,7 +18,15 @@
             60% { transform: translateX(-300%); }
             80% { transform: translateX(-400%); }
             100% { transform: translateX(-500%); }
+
+            /* 0%, 16.67% { transform: translateX(0%); } 
+            16.68%, 33.34% { transform: translateX(-100%); } 
+            33.35%, 50.01% { transform: translateX(-200%); }
+            50.02%, 66.68% { transform: translateX(-300%); }
+            66.69%, 83.35% { transform: translateX(-400%); }
+            83.36%, 100% { transform: translateX(-500%); } */
       }
+  
       a img {
             filter: grayscale(100%);
             transition: filter 0.5s ease-in-out;
@@ -154,9 +162,10 @@
       </div>
     </div>
 
-    <div class="px-3 md:px-16">
+    <!-- slider -->
+    <div class="px-3 md:px-16 mx-auto ">
       <div class="mt-5 w-full overflow-hidden relative">
-        <div class="flex w-full animate-[slide_30s_infinite]">
+        <div class="flex w-full animate-[slide_70s_infinite]">
             <a class="w-full flex-shrink-0">
                 <img src="Photos/solo.jpg" class="w-full h-[170px] md:h-[200px] object-center " alt="Slide 1">
             </a>
@@ -180,7 +189,7 @@
       </div>
     </div>
 
-    <div class="hidden md:flex justify-center mt-[-35px] relative">
+    <div class="hidden md:flex justify-center mt-[-35px] relative"> <!---->
       <div class="bg-white w-[780px] flex justify-center py-3 px-5">
         <div class="flex items-center">
           <div class="text-2xl  rotate-90 text-[#212121]"><i class="bi bi-search "></i></div>
@@ -217,8 +226,6 @@
       
     </div>
     
-    <div>
-      hello
-    </div>
+    
   </body>
 </html>
