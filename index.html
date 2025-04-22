@@ -12,33 +12,45 @@
 
     <style>
       @keyframes slide {
-            0% { transform: translateX(0%); }
-            20% { transform: translateX(-100%); }
-            40% { transform: translateX(-200%); }
-            60% { transform: translateX(-300%); }
-            80% { transform: translateX(-400%); }
-            100% { transform: translateX(-500%); }
+        0% {
+          transform: translateX(0%);
+        }
+        20% {
+          transform: translateX(-100%);
+        }
+        40% {
+          transform: translateX(-200%);
+        }
+        60% {
+          transform: translateX(-300%);
+        }
+        80% {
+          transform: translateX(-400%);
+        }
+        100% {
+          transform: translateX(-500%);
+        }
 
-            /* 0%, 16.67% { transform: translateX(0%); } 
+        /* 0%, 16.67% { transform: translateX(0%); } 
             16.68%, 33.34% { transform: translateX(-100%); } 
             33.35%, 50.01% { transform: translateX(-200%); }
             50.02%, 66.68% { transform: translateX(-300%); }
             66.69%, 83.35% { transform: translateX(-400%); }
             83.36%, 100% { transform: translateX(-500%); } */
       }
-  
-      a img {
-            filter: grayscale(100%);
-            transition: filter 0.5s ease-in-out;
-        }
-      img:hover {
-            filter: grayscale(0%);
-        }
-  </style>
+
+      a .ani {
+        filter: grayscale(100%);
+        transition: filter 0.5s ease-in-out;
+      }
+      .ani:hover {
+        filter: grayscale(0%);
+      }
+    </style>
   </head>
 
-  <body class="bg-[#1b1b1b] ">
-    <header class="px-5 bg-[#201f31] py-4">
+  <body class="bg-[#1b1b1b]">
+    <!-- <header class="px-5 bg-[#201f31] py-4">
       <div class="flex items-center">
         <div class="text-3xl text-white font-bold first">
           <i class="bi bi-list "></i>
@@ -112,17 +124,19 @@
         <button class="bg-pink-300 font-bold p-2 rounded-lg ml-[465px] md:ml-[250px]">Login</button>
       </div>
     </header>
+  -->
+    <!-- Animesuge -->
 
-                                        <!-- Animesuge -->
-                                        
     <header class="mt-4 bg-[#1b1b1b] px-3 md:px-16 py-4">
-      <div class="flex items-center ">
-        <div class="text-3xl text-white hover:text-[red] font-bold first flex md:hidden">
-          <i class="bi bi-list "></i>
+      <div class="flex items-center">
+        <div
+          class="text-3xl text-white hover:text-[red] font-bold first flex md:hidden"
+        >
+          <i class="bi bi-list"></i>
         </div>
 
         <div class="w-28 md:w-36 hover:cursor-pointer md:ml-0 sm:ml-[280px]">
-          <img src="Photos\Ani.png" alt="animesuge">
+          <img src="Photos\Ani.png" alt="animesuge" />
         </div>
 
         <div class="hidden md:flex ml-10 text-white">
@@ -139,11 +153,15 @@
         </div>
 
         <div class="text-white hover:cursor-pointer md:ml-8 sm:ml-[-370px]">
-          <span class="bg-red-600 py-1 px-2">EN</span>
-          <span class="bg-slate-600 py-1 px-3 ml-[-4px] hover:bg-slate-400">JP</span>
+          <span class="bg-red-600 py-1 px-1">EN</span>
+          <span class="bg-slate-600 py-1 px-2 ml-[-4px] hover:bg-slate-400"
+            >JP</span
+          >
         </div>
 
-        <div class="flex text-[#d8d8d8] hover:text-white hover:cursor-pointer md:ml-4 sm:ml-[480px]">
+        <div
+          class="flex text-[#d8d8d8] hover:text-white hover:cursor-pointer md:ml-4 sm:ml-[480px]"
+        >
           <div class="text-3xl">
             <i class="bi bi-person-circle"></i>
           </div>
@@ -155,75 +173,596 @@
     <div class="flex md:hidden justify-center px-3 mt-0">
       <div class="bg-[#0e0e0e] w-full flex justify-center py-3">
         <div class="flex items-center">
-          <div class="text-sm  rotate-90 text-gray-500"><i class="bi bi-search "></i></div>
-          <input type="" class="w-[660px]  px-2 text-sm focus:outline-none placeholder:text-gray-500 bg-[#0e0e0e]" placeholder="Search" >
-          <button class="px-2 py-0.5 rounded-sm bg-[#2d2d2d] text-white text-sm">Filter</button>
+          <div class="text-sm rotate-90 text-gray-500">
+            <i class="bi bi-search"></i>
+          </div>
+          <input
+            type=""
+            class="w-[660px] text-white px-2 text-sm focus:outline-none placeholder:text-gray-500 bg-[#0e0e0e]"
+            placeholder="Search"
+          />
+          <button
+            class="px-2 py-0.5 rounded-sm bg-[#2d2d2d] text-white text-sm"
+          >
+            Filter
+          </button>
         </div>
       </div>
     </div>
 
     <!-- slider -->
-    <div class="px-3 md:px-16 mx-auto ">
-      <div class="mt-5 w-full overflow-hidden relative">
+    <div class="px-3 md:px-16 mx-auto">
+      <div class="mt-3 w-full overflow-hidden relative">
         <div class="flex w-full animate-[slide_70s_infinite]">
-            <a class="w-full flex-shrink-0">
-                <img src="Photos/solo.jpg" class="w-full h-[170px] md:h-[200px] object-center " alt="Slide 1">
-            </a>
-            <a class="w-full flex-shrink-0">
-                <img src="Photos/op.jpg" class="w-full h-[170px] md:h-[200px] object-center " alt="Slide 2">
-            </a>
-            <a class="w-full flex-shrink-0">
-                <img src="Photos/VS.jpg" class="w-full h-[170px] md:h-[200px] object-center " alt="Slide 3">
-            </a>
-            <a class="w-full flex-shrink-0">
-                <img src="Photos/DN.jpg" class="w-full h-[170px] md:h-[200px] object-center " alt="Slide 4">
-            </a>
-
-            <a class="w-full flex-shrink-0">
-              <img src="Photos/HM.jpg" class="w-full h-[170px] md:h-[200px] object-center " alt="Slide 5">
+          <a class="w-full flex-shrink-0">
+            <img
+              src="Photos/solo.jpg"
+              class="w-full h-[170px] md:h-[200px] object-center ani"
+              alt="Slide 1"
+            />
           </a>
           <a class="w-full flex-shrink-0">
-              <img src="Photos/DH.jpg" class="w-full h-[170px] md:h-[200px] object-center " alt="Slide 6">
+            <img
+              src="Photos/op.jpg"
+              class="w-full h-[170px] md:h-[200px] object-center ani"
+              alt="Slide 2"
+            />
+          </a>
+          <a class="w-full flex-shrink-0">
+            <img
+              src="Photos/VS.jpg"
+              class="w-full h-[170px] md:h-[200px] object-center ani"
+              alt="Slide 3"
+            />
+          </a>
+          <a class="w-full flex-shrink-0">
+            <img
+              src="Photos/DN.jpg"
+              class="w-full h-[170px] md:h-[200px] object-center ani"
+              alt="Slide 4"
+            />
+          </a>
+
+          <a class="w-full flex-shrink-0">
+            <img
+              src="Photos/HM.jpg"
+              class="w-full h-[170px] md:h-[200px] object-center ani"
+              alt="Slide 5"
+            />
+          </a>
+          <a class="w-full flex-shrink-0">
+            <img
+              src="Photos/DH.jpg"
+              class="w-full h-[170px] md:h-[200px] object-center ani"
+              alt="Slide 6"
+            />
           </a>
         </div>
       </div>
     </div>
 
-    <div class="hidden md:flex justify-center mt-[-35px] relative"> <!---->
+    <div class="hidden md:flex justify-center mt-[-35px] relative">
+      <!---->
       <div class="bg-white w-[780px] flex justify-center py-3 px-5">
         <div class="flex items-center">
-          <div class="text-2xl  rotate-90 text-[#212121]"><i class="bi bi-search "></i></div>
-          <input type="" class="w-[640px] py-2 px-2 text-xl focus:outline-none placeholder:text-[#212121]" placeholder="Search anime.." >
-          <button class="px-6 py-2 bg-red-700 hover:bg-red-600 text-white">Filter</button>
+          <div class="text-2xl rotate-90 text-[#212121]">
+            <i class="bi bi-search"></i>
+          </div>
+          <input
+            type=""
+            class="w-[640px] py-2 px-2 text-xl focus:outline-none placeholder:text-[#212121]"
+            placeholder="Search anime.."
+          />
+          <button class="px-6 py-2 bg-red-700 hover:bg-red-600 text-white">
+            Filter
+          </button>
         </div>
       </div>
     </div>
 
     <div class="flex justify-center mt-4 md:mt-8">
       <p class="text-[#6d6d6d]">
-        If you enjoy the website, please consider sharing it with your friends. Thank you!
+        If you enjoy the website, please consider sharing it with your friends.
+        Thank you!
       </p>
     </div>
 
-    <div class="flex mt-3 px-4 md:px-16 ">
-      <div class="w-5 text-lg md:text-xl text-white">
-        RECENTLY UPDATE
-      </div>
+    <div class="flex mt-3 px-4 md:px-16">
+      <div class="w-5 text-lg md:text-xl text-white">RECENTLY UPDATE</div>
       <div class="flex mt-8 justify-between w-full">
-          <div class="flex ml-24 gap-5  md:text-lg cursor-pointer">
-            <a class="text-white">All</a>
-            <a class="text-[#545454] hover:text-white">Sub</a>
-            <a class="text-[#545454] hover:text-white">Dub</a>
-            <a class="text-[#545454] hover:text-white">Trending</a>
-            <a class="text-[#545454] hover:text-white">Random</a>
+        <div class="flex ml-24 gap-5 md:text-lg cursor-pointer">
+          <a class="text-white">All</a>
+          <a class="text-[#545454] hover:text-white">Sub</a>
+          <a class="text-[#545454] hover:text-white">Dub</a>
+          <a class="text-[#545454] hover:text-white">Trending</a>
+          <a class="text-[#545454] hover:text-white">Random</a>
+        </div>
+        <div class="text-lg md:text-xl">
+          <button class="mr-2 text-[#545454]">&#10094;</button>
+          <button class="text-white">&#x276F;</button>
+        </div>
+      </div>
+    </div>
+
+    <!--Animelist-->
+
+    <div class="flex mt-3 px-4 md:px-16">
+
+      <div class="mt-3  cursor-pointer">
+        <div class="upper" class="">
+          <a>
+            <img src="Photos/DN.jpg" class="h-[265px] w-[183px] object-fill"/>
+          </a>
+        </div>
+        <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+          <div class="">
+            <a class="bg-[#2a2a2a] text-white">
+              <i class="bi bi-badge-cc"></i><span class="ml-1">37</span>
+            </a>
           </div>
-          <div class=" text-lg md:text-xl">
-            <button class="mr-2 text-[#545454]">&#10094;</button>
-            <button class="text-white">&#x276F;</button>
+          <div class="text-[#545454] hover:text-white">Death Note</div>
+        </div>
+      </div>
+
+      <div class="mt-3 ml-5 cursor-pointer">
+        <div class="upper" class="">
+          <a
+            ><img src="Photos/op.jpg" class="h-[265px] w-[183px] object-fill"
+          /></a>
+        </div>
+        <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+          <div class="">
+            <a class="bg-[#2a2a2a] text-white">
+              <i class="bi bi-badge-cc"></i><span class="ml-1">1122</span>
+            </a>
+            <span class="bg-[#232323] text-white">?</span>
+          </div>
+          <div class="text-[#545454] hover:text-white">One Piece</div>
+        </div>
+      </div>
+
+      <div class="mt-3  ml-5 cursor-pointer">
+        <div class="upper" class="">
+          <a
+            ><img src="Photos/vinland.jpg" class="h-[265px] w-[183px] object-fill"
+          /></a>
+        </div>
+        <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+          <div class="">
+            <a class="bg-[#2a2a2a] text-white">
+              <i class="bi bi-badge-cc"></i><span class="ml-1">48</span>
+            </a>
+          </div>
+          <div class="text-[#545454] hover:text-white">Vinland Saga</div>
+        </div>
+      </div>
+
+      <div class="mt-3  ml-5 cursor-pointer">
+        <div class="upper" class="">
+          <a><img src="Photos/Aot.jpg" class="h-[265px] w-[183px] object-fill"/></a>
+        </div>
+        <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+          <div class="">
+            <a class="bg-[#2a2a2a] text-white">
+              <i class="bi bi-badge-cc"></i><span class="ml-1">94</span>
+            </a>
+          </div>
+          <div class="text-[#545454] hover:text-white">Attack on Titan</div>
+        </div>
+      </div>
+
+      <div class="mt-3  ml-5 cursor-pointer">
+        <div class="upper" class="">
+          <a>
+            <img src="Photos/VS.jpg" class="h-[265px] w-[183px] object-fill"/>
+          </a>
+        </div>
+        <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+          <div class="">
+            <a class="bg-[#2a2a2a] text-white">
+              <i class="bi bi-badge-cc"></i><span class="ml-1">720</span>
+            </a>
+            <span class="bg-[#232323] text-white">720</span>
+          </div>
+          <div class="text-[#545454] hover:text-white">Naruto</div>
+        </div>
+      </div>
+
+      <div class="mt-3  ml-5 cursor-pointer">
+        <div class="upper" class="">
+          <a
+            ><img src="Photos/mon.jpg" class="h-[265px] w-[183px] object-fill"
+          /></a>
+        </div>
+        <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+          <div class="">
+            <a class="bg-[#2a2a2a] text-white">
+              <i class="bi bi-badge-cc"></i><span class="ml-1">74</span>
+            </a>
+            <span class="bg-[#232323] text-white">74</span>
+          </div>
+          <div class="text-[#545454] hover:text-white">Monster</div>
+        </div>
+      </div>
+
+      <div class="mt-3  ml-5 cursor-pointer">
+        <div class="upper" class="">
+          <a
+            ><img src="Photos/bleach.jpg" class="h-[265px] w-[183px] object-fill"
+          /></a>
+        </div>
+        <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+          <div class="">
+            <a class="bg-[#2a2a2a] text-white">
+              <i class="bi bi-badge-cc"></i><span class="ml-1">410</span>
+            </a>
+            <span class="bg-[#232323] text-white">410</span>
+          </div>
+          <div class="text-[#545454] hover:text-white">Bleach</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="">
+      <div class="flex mt-3 px-4 md:px-16">
+        <div class="mt-3  cursor-pointer">
+          <div class="upper" class="">
+            <a>
+              <img src="Photos/DH.jpg" class="h-[265px] w-[183px] object-fill"/>
+            </a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">25</span>
+              </a>
+              <span class="bg-[#232323] text-white">25</span>
+            </div>
+            <div class="text-[#545454] hover:text-white">The Dangers in My Heart</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a
+              ><img src="Photos/HM.jpg" class="h-[265px] w-[183px] object-fill"
+            /></a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">24</span>
+              </a>
+            </div>
+            <div class="text-[#545454] hover:text-white">Horimiya</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a
+              ><img src="Photos/oregairu.jpg" class="h-[265px] w-[183px] object-fill"
+            /></a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">42</span>
+              </a>
+            </div>
+            <div class="text-[#545454] hover:text-white">My Teen Romantic Comedy SNAFU </div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a
+              ><img src="Photos/KS.jpg" class="h-[265px] w-[183px] object-fill"
+            /></a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">48</span>
+              </a>
+            </div>
+            <div class="text-[#545454] hover:text-white">Kaguya Sama</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a
+              ><img src="Photos/april.jpg" class="h-[265px] w-[183px] object-fill"
+            /></a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">22</span>
+              </a>
+              <span class="bg-[#232323] text-white">22</span>
+            </div>
+            <div class="text-[#545454] hover:text-white">Your lie in April</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a
+              ><img src="Photos/iam.jpg" class="h-[265px] w-[183px] object-fill"
+            /></a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">12</span>
+              </a>
+              <span class="bg-[#232323] text-white">12</span>
+            </div>
+            <div class="text-[#545454] hover:text-white">I am getting married to a girl that I hate in class</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a
+              ><img src="Photos/nisekoi.jpg" class="h-[265px] w-[183px] object-fill"
+            /></a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">26</span>
+              </a>
+              <span class="bg-[#232323] text-white">26</span>
+            </div>
+            <div class="text-[#545454] hover:text-white">Nisekoi</div>
           </div>
         </div>
       </div>
-  
-      
+    </div>
+
+    <div>
+      <div class="flex mt-3 px-4 md:px-16">
+        <div class="mt-3  cursor-pointer">
+          <div class="upper" class="">
+            <a>
+              <img src="Photos/mtmc.jpg" class="h-[265px] w-[183px] object-fill"/>
+            </a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">12</span>
+              </a>
+              <span class="bg-[#232323] text-white">12</span>
+            </div>
+            <div class="text-[#545454] hover:text-white">More than a married couple, But not lovers</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a
+              ><img src="Photos/kcc.jpg" class="h-[265px] w-[183px] object-fill"
+            /></a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">24</span>
+              </a>
+            </div>
+            <div class="text-[#545454] hover:text-white">Komi can't communicate</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a
+              ><img src="Photos/woakoi.jpg" class="h-[265px] w-[183px] object-fill"
+            /></a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">11</span>
+              </a>
+              <span class="bg-[#232323] text-white">11</span>
+            </div>
+            <div class="text-[#545454] hover:text-white">Wotakoi</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a
+              ><img src="Photos/bunny.jpg" class="h-[265px] w-[183px] object-fill"
+            /></a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">12</span>
+              </a>
+            </div>
+            <div class="text-[#545454] hover:text-white">Rascal Does Not Dream of Bunny Girl Senpai</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a>
+              <img src="Photos/glasses.jpg" class="h-[265px] w-[183px] object-fill"/>
+            </a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">12</span>
+              </a>
+              <span class="bg-[#232323] text-white">12</span>
+            </div>
+            <div class="text-[#545454] hover:text-white">The I like forgot her glasses</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a>
+              <img src="Photos/kubo.jpg" class="h-[265px] w-[183px] object-fill"/>
+          </a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">12</span>
+              </a>
+            </div>
+            <div class="text-[#545454] hover:text-white">Kubo won't let me be invisible</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a>
+              <img src="Photos/quintuplets.jpg" class="h-[265px] w-[183px] object-fill"/>
+            </a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">25</span>
+              </a>
+              <span class="bg-[#232323] text-white">25</span>
+            </div>
+            <div class="text-[#545454] hover:text-white">The quintessential quintuplets</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+     <div>
+      <div class="flex mt-3 px-4 md:px-16">
+        <div class="mt-3  cursor-pointer">
+          <div class="upper" class="">
+            <a>
+              <img src="Photos/clover.jpg" class="h-[265px] w-[183px] object-fill"/>
+            </a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">175</span>
+              </a>
+              <span class="bg-[#232323] text-white">175</span>
+            </div>
+            <div class="text-[#545454] hover:text-white">Black Clover</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a
+              ><img src="Photos/dan.jpg" class="h-[265px] w-[183px] object-fill"
+            /></a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">13</span>
+              </a>
+            </div>
+            <div class="text-[#545454] hover:text-white">Dandadan</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a
+              ><img src="Photos/blue.jpg" class="h-[265px] w-[183px] object-fill"
+            /></a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">25</span>
+              </a>
+              <span class="bg-[#232323] text-white">25</span>
+            </div>
+            <div class="text-[#545454] hover:text-white">Blue Lock</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a
+              ><img src="Photos/rudy.jpg" class="h-[265px] w-[183px] object-fill"
+            /></a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">24</span>
+              </a>
+            </div>
+            <div class="text-[#545454] hover:text-white">Mushoku Tensei</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a>
+              <img src="Photos/haikyu.jpg" class="h-[265px] w-[183px] object-fill"/>
+            </a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">36</span>
+              </a>
+              <span class="bg-[#232323] text-white">36</span>
+            </div>
+            <div class="text-[#545454] hover:text-white">Haikyuu!!</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a>
+              <img src="Photos/konosuba.jpg" class="h-[265px] w-[183px] object-fill"/>
+          </a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">36</span>
+              </a>
+            </div>
+            <div class="text-[#545454] hover:text-white">Konosuba</div>
+          </div>
+        </div>
+
+        <div class="mt-3  ml-5 cursor-pointer">
+          <div class="upper" class="">
+            <a>
+              <img src="Photos/cote.jpg" class="h-[265px] w-[183px] object-fill"/>
+            </a>
+          </div>
+          <div class="lower flex flex-col w-[180px] text-center mt-1 p-1">
+            <div class="">
+              <a class="bg-[#2a2a2a] text-white">
+                <i class="bi bi-badge-cc"></i><span class="ml-1">36</span>
+              </a>
+              <span class="bg-[#232323] text-white">36</span>
+            </div>
+            <div class="text-[#545454] hover:text-white">Classroom of the Elite</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </body>
 </html>
